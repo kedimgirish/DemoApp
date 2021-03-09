@@ -12,7 +12,7 @@ jobs:
         uses: archive/github-actions-slack@master
         id: send-message
         with:
-          slack-bot-user-oauth-access-token: ${{ xoxb-1861292072304-1834494603989-2DMwk6sY8NV30tnQmCxrX03B }}
+          slack-bot-user-oauth-access-token: ${{ secret.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN.TESTSLACKSECRET }}
           slack-channel: automation
           slack-text: Hello! Event "${{ github.event_name }}" in "${{ github.repository }}" 🤓
 
