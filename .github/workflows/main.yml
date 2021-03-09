@@ -27,3 +27,6 @@ jobs:
       uses: pullreminders/slack-action@master
       with:
           args: '{\"channel\":\"C01QELCNGLW\",\"text\":\"Hello world\"}'
+  run: |
+        echo "$GITHUB_CONTEXT"
+        echo ${{ github.event.pull_request.title }}
