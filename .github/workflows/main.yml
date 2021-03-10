@@ -24,8 +24,9 @@ jobs:
     - name: Notify slack
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        run: echo ${{ github.event.pull_request.head.ref }}
+        run: |
+          URL="https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files"
       uses: pullreminders/slack-action@master
       with:
-          args: '{\"channel\":\"C01QELCNGLW\",\"text\":github.event.pull_request.head.ref}'
+          args: '{\"channel\":\"C01QELCNGLW\",\"text\":URL}'
 
