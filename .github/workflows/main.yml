@@ -28,4 +28,4 @@ jobs:
       
       uses: pullreminders/slack-action@master
       with:
-          args: '{\"channel\":\"C01QELCNGLW\",\"text\":env.URL}'
+          args: '{\"channel\":\"C01QELCNGLW\",\"text\":${{ env.URL }}}'
